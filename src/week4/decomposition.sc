@@ -49,17 +49,18 @@ eval(new Sum(new Number(10), new Number(20)))
   * in all sub classes
   *
   * We can do one of the following
-  * 1. Add a instance check and type cast to save addition of methods
+  * 1. Add an instance check and type cast to save addition of methods
   * like isNumber and isSum in base trait
   *
   * 2.We can have object oriented solution by having eval method in each
   * type.
   *
-  * In second scenarios think of following scenario
+  * In case of second solution think of following scenario
   * a * b + a * c = a * (b + c)
   *
-  * This kind of simplification involves the whole subtree not the single node
+  * This kind of simplification involves the whole subtree not the single node, it means
+  * we can't push simplification to single node
+  *
   * In order to do this we again need test methods and access methods
   * So, we are back to the original problem
-  *
   */
