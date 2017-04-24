@@ -34,12 +34,15 @@ class NonEmptySet(elem: Int, left: IntSet, right: IntSet) extends IntSet {
   override def union(other: IntSet): IntSet = ((left union right) union other) include elem
 }
 
-val a = new EmptySet()
-val b = a.include(10)
-val set1 = b.include(15).include(9)
+//val a = new EmptySet()
+//val b = a.include(10)
+//val set1 = b.include(15).include(9)
+//
+//val d = new NonEmptySet(50, new EmptySet, new EmptySet)
+//val set2 = d.include(55).include(10)
 
-val d = new NonEmptySet(50, new EmptySet, new EmptySet)
-val set2 = d.include(55).include(10)
+//set1.union(set2)
 
-set1.union(set2)
+val a: Array[NonEmptySet] = Array(new NonEmptySet(1, new EmptySet, new EmptySet))
 
+val b: Array[IntSet] = a
